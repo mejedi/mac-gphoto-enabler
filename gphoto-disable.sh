@@ -1,0 +1,1 @@
+./gphoto-enable.sh
