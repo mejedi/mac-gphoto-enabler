@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90E9261D1702416600D5A36D /* abstract_client.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926091702416600D5A36D /* abstract_client.cc */; };
+		90E9261E1702416600D5A36D /* abstract_device.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E9260B1702416600D5A36D /* abstract_device.cc */; };
+		90E9261F1702416600D5A36D /* agent_app.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E9260D1702416600D5A36D /* agent_app.cc */; };
+		90E926201702416600D5A36D /* client_socket.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E9260F1702416600D5A36D /* client_socket.cc */; };
+		90E926211702416600D5A36D /* client.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926111702416600D5A36D /* client.cc */; };
+		90E926221702416600D5A36D /* dispatch_source.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926131702416600D5A36D /* dispatch_source.cc */; };
+		90E926231702416600D5A36D /* hub.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926151702416600D5A36D /* hub.cc */; };
+		90E926241702416600D5A36D /* main.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926171702416600D5A36D /* main.cc */; };
+		90E926251702416600D5A36D /* usb_device_checker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926181702416600D5A36D /* usb_device_checker.cc */; };
+		90E926261702416600D5A36D /* usb_device.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E9261A1702416600D5A36D /* usb_device.cc */; };
+		90E92628170241F400D5A36D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92627170241F400D5A36D /* CoreFoundation.framework */; };
+		90E9262A170241FD00D5A36D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92629170241FD00D5A36D /* IOKit.framework */; };
+		90E9262C1702428A00D5A36D /* libgphoto2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E9262B1702428A00D5A36D /* libgphoto2.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90E925FD1702411400D5A36D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		90E925FF1702411400D5A36D /* gphoto-enabler-agent */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gphoto-enabler-agent"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90E926091702416600D5A36D /* abstract_client.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abstract_client.cc; sourceTree = "<group>"; };
+		90E9260A1702416600D5A36D /* abstract_client.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = abstract_client.hh; sourceTree = "<group>"; };
+		90E9260B1702416600D5A36D /* abstract_device.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abstract_device.cc; sourceTree = "<group>"; };
+		90E9260C1702416600D5A36D /* abstract_device.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = abstract_device.hh; sourceTree = "<group>"; };
+		90E9260D1702416600D5A36D /* agent_app.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = agent_app.cc; sourceTree = "<group>"; };
+		90E9260E1702416600D5A36D /* agent_app.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = agent_app.hh; sourceTree = "<group>"; };
+		90E9260F1702416600D5A36D /* client_socket.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = client_socket.cc; sourceTree = "<group>"; };
+		90E926101702416600D5A36D /* client_socket.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = client_socket.hh; sourceTree = "<group>"; };
+		90E926111702416600D5A36D /* client.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = client.cc; sourceTree = "<group>"; };
+		90E926121702416600D5A36D /* client.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = client.hh; sourceTree = "<group>"; };
+		90E926131702416600D5A36D /* dispatch_source.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dispatch_source.cc; sourceTree = "<group>"; };
+		90E926141702416600D5A36D /* dispatch_source.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dispatch_source.hh; sourceTree = "<group>"; };
+		90E926151702416600D5A36D /* hub.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hub.cc; sourceTree = "<group>"; };
+		90E926161702416600D5A36D /* hub.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hub.hh; sourceTree = "<group>"; };
+		90E926171702416600D5A36D /* main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
+		90E926181702416600D5A36D /* usb_device_checker.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = usb_device_checker.cc; sourceTree = "<group>"; };
+		90E926191702416600D5A36D /* usb_device_checker.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = usb_device_checker.hh; sourceTree = "<group>"; };
+		90E9261A1702416600D5A36D /* usb_device.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = usb_device.cc; sourceTree = "<group>"; };
+		90E9261B1702416600D5A36D /* usb_device.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = usb_device.hh; sourceTree = "<group>"; };
+		90E9261C1702416600D5A36D /* utility.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = utility.hh; sourceTree = "<group>"; };
+		90E92627170241F400D5A36D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		90E92629170241FD00D5A36D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		90E9262B1702428A00D5A36D /* libgphoto2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgphoto2.dylib; path = ../../../../usr/local/lib/libgphoto2.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90E925FC1702411400D5A36D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E9262A170241FD00D5A36D /* IOKit.framework in Frameworks */,
+				90E92628170241F400D5A36D /* CoreFoundation.framework in Frameworks */,
+				90E9262C1702428A00D5A36D /* libgphoto2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90E925F41702406100D5A36D = {
+			isa = PBXGroup;
+			children = (
+				90E9262B1702428A00D5A36D /* libgphoto2.dylib */,
+				90E92629170241FD00D5A36D /* IOKit.framework */,
+				90E92627170241F400D5A36D /* CoreFoundation.framework */,
+				90E926091702416600D5A36D /* abstract_client.cc */,
+				90E9260A1702416600D5A36D /* abstract_client.hh */,
+				90E9260B1702416600D5A36D /* abstract_device.cc */,
+				90E9260C1702416600D5A36D /* abstract_device.hh */,
+				90E9260D1702416600D5A36D /* agent_app.cc */,
+				90E9260E1702416600D5A36D /* agent_app.hh */,
+				90E9260F1702416600D5A36D /* client_socket.cc */,
+				90E926101702416600D5A36D /* client_socket.hh */,
+				90E926111702416600D5A36D /* client.cc */,
+				90E926121702416600D5A36D /* client.hh */,
+				90E926131702416600D5A36D /* dispatch_source.cc */,
+				90E926141702416600D5A36D /* dispatch_source.hh */,
+				90E926151702416600D5A36D /* hub.cc */,
+				90E926161702416600D5A36D /* hub.hh */,
+				90E926171702416600D5A36D /* main.cc */,
+				90E926181702416600D5A36D /* usb_device_checker.cc */,
+				90E926191702416600D5A36D /* usb_device_checker.hh */,
+				90E9261A1702416600D5A36D /* usb_device.cc */,
+				90E9261B1702416600D5A36D /* usb_device.hh */,
+				90E9261C1702416600D5A36D /* utility.hh */,
+				90E926001702411400D5A36D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90E926001702411400D5A36D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90E925FF1702411400D5A36D /* gphoto-enabler-agent */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90E925FE1702411400D5A36D /* gphoto-enabler-agent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90E926081702411400D5A36D /* Build configuration list for PBXNativeTarget "gphoto-enabler-agent" */;
+			buildPhases = (
+				90E925FB1702411400D5A36D /* Sources */,
+				90E925FC1702411400D5A36D /* Frameworks */,
+				90E925FD1702411400D5A36D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gphoto-enabler-agent";
+			productName = "gphoto-enabler-agent";
+			productReference = 90E925FF1702411400D5A36D /* gphoto-enabler-agent */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90E925F51702406100D5A36D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 90E925F81702406100D5A36D /* Build configuration list for PBXProject "gphoto_enabler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 90E925F41702406100D5A36D;
+			productRefGroup = 90E926001702411400D5A36D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90E925FE1702411400D5A36D /* gphoto-enabler-agent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90E925FB1702411400D5A36D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E9261D1702416600D5A36D /* abstract_client.cc in Sources */,
+				90E9261E1702416600D5A36D /* abstract_device.cc in Sources */,
+				90E9261F1702416600D5A36D /* agent_app.cc in Sources */,
+				90E926201702416600D5A36D /* client_socket.cc in Sources */,
+				90E926211702416600D5A36D /* client.cc in Sources */,
+				90E926221702416600D5A36D /* dispatch_source.cc in Sources */,
+				90E926231702416600D5A36D /* hub.cc in Sources */,
+				90E926241702416600D5A36D /* main.cc in Sources */,
+				90E926251702416600D5A36D /* usb_device_checker.cc in Sources */,
+				90E926261702416600D5A36D /* usb_device.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		90E925F91702406100D5A36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+			};
+			name = Debug;
+		};
+		90E925FA1702406100D5A36D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+			};
+			name = Release;
+		};
+		90E926061702411400D5A36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		90E926071702411400D5A36D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90E925F81702406100D5A36D /* Build configuration list for PBXProject "gphoto_enabler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90E925F91702406100D5A36D /* Debug */,
+				90E925FA1702406100D5A36D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90E926081702411400D5A36D /* Build configuration list for PBXNativeTarget "gphoto-enabler-agent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90E926061702411400D5A36D /* Debug */,
+				90E926071702411400D5A36D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90E925F51702406100D5A36D /* Project object */;
+}
