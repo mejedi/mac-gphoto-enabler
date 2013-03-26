@@ -20,8 +20,8 @@ public:
       io_iterator_t service,
       uint8_t bus_num,
       uint16_t address,
-      const std::string &vendor_str,
-      const std::string &product_str);
+      const std::string &vendor,
+      const std::string &product);
 
   virtual void destroy();
 
@@ -34,8 +34,8 @@ private:
     io_service_t service,
     uint8_t bus_num_,
     uint16_t address_,
-    const std::string &vendor_str,
-    const std::string &product_str);
+    const std::string &vendor,
+    const std::string &product);
 
   virtual void notify(io_service_t service, natural_t msg_type, void *msg_arg);
 
@@ -43,8 +43,8 @@ private:
 
   uint8_t                    bus_num;
   uint16_t                   address;
-  std::string                vendor_str;
-  std::string                product_str;
+  std::string                vendor;
+  std::string                product;
 };
 
 

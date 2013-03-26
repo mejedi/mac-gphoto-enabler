@@ -118,16 +118,16 @@ void agent_app::setup_launchd_listeners() {
 
 void agent_app::init_devices(io_iterator_t iter) {
   kern_return_t kr;
-  io_iterator_t device;
+  io_iterator_t service;
   CFMutableDictionaryRef props = NULL;
 
   CFTypeRef v;
   int32_t i32;
   int64_t i64;
 
-  while ((device = IOIteratorNext(iter))) {
+  while ((service = IOIteratorNext(iter))) {
 
-    kr = IORegistryEntryCreateCFProperties(device, &props, NULL, 0);
+    kr = IORegistryEntryCreateCFProperties(service, &props, NULL, 0);
     if (kr == KERN_SUCCESS) {
 
       uint32_t location_id = 0;
@@ -135,8 +135,8 @@ void agent_app::init_devices(io_iterator_t iter) {
       uint16_t vendor_id = 0;
       uint16_t product_id = 0;
 
-      std::string vendor_str;
-      std::string product_str;
+      std::string vendor;
+      std::string product;
 
       /* location_id */
       if (CFDictionaryGetValueIfPresent(props, CFSTR(kUSBDevicePropertyLocationID), &v)
@@ -174,31 +174,31 @@ void agent_app::init_devices(io_iterator_t iter) {
         product_id = i32;
       }
 
-      /* vendor_str */
+      /* vendor */
       if (CFDictionaryGetValueIfPresent(props, CFSTR(kUSBVendorString), &v)
           && CFGetTypeID(v) == CFStringGetTypeID()) {
 
-        std_string_from_cfstring(vendor_str, (CFStringRef)v);
+        std_string_from_cfstring(vendor, (CFStringRef)v);
       }
 
-      /* product_str */
+      /* product */
       if (CFDictionaryGetValueIfPresent(props, CFSTR(kUSBProductString), &v)
           && CFGetTypeID(v) == CFStringGetTypeID()) {
 
-        std_string_from_cfstring(product_str, (CFStringRef)v);
+        std_string_from_cfstring(product, (CFStringRef)v);
       }
 
       /* no more attributes */
 
       if (check_vid_pid(vendor_id, product_id)) {
-        usb_device::add(this, device, location_id>>24, usb_address, vendor_str, product_str);
+        usb_device::add(this, service, location_id>>24, usb_address, vendor, product);
       }
 
       CFRelease(props);
       props = NULL;
     }
 
-    IOObjectRelease(device);
+    IOObjectRelease(service);
   }
 }
 
