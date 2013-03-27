@@ -10,7 +10,7 @@ We provide a script to do this in a reversible way on a per user basis.
 Additionally we provide a daemon program that may be used by an application
 built on top of gphoto to subscribe to camera discovered/camera gone
 notifications.  While there is an open connection between the deamon
-and an app, Mac OS X native digital camera framework is disabled automatically. **[NOT READY YET]**
+and an app, Mac OS X native digital camera framework is disabled automatically.
 
 ### Usage
 
