@@ -49,13 +49,13 @@ private:
 
   void timed_killer_set_timer();
 
-  int                        clients_count;
-  hub                        hub;
   IONotificationPortRef      notification_port;
   usb_device_checker         checker;
   dispatch_source            timed_killer;
   std::vector<std::unique_ptr<dispatch_source>>
                              other_sources;
+  int                        clients_count;
+  hub                        hub;
 };
 
 
