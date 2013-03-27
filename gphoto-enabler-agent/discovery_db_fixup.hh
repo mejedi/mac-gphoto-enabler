@@ -19,7 +19,6 @@ private:
   discovery_db_fixup(const std::string &db_file_path);
 
   std::string                db_file_path;
-  bool                       did_apply_patch;
 };
 
 

@@ -21,6 +21,7 @@
 		90E9262A170241FD00D5A36D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92629170241FD00D5A36D /* IOKit.framework */; };
 		90E9262C1702428A00D5A36D /* libgphoto2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E9262B1702428A00D5A36D /* libgphoto2.dylib */; };
 		90E9262F1703755C00D5A36D /* discovery_db_fixup.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E9262D1703755C00D5A36D /* discovery_db_fixup.cc */; };
+		90E92631170394C200D5A36D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92630170394C200D5A36D /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,7 @@
 		90E9262B1702428A00D5A36D /* libgphoto2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgphoto2.dylib; path = ../../../../usr/local/lib/libgphoto2.dylib; sourceTree = "<group>"; };
 		90E9262D1703755C00D5A36D /* discovery_db_fixup.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = discovery_db_fixup.cc; sourceTree = "<group>"; };
 		90E9262E1703755C00D5A36D /* discovery_db_fixup.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = discovery_db_fixup.hh; sourceTree = "<group>"; };
+		90E92630170394C200D5A36D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E92631170394C200D5A36D /* libsqlite3.dylib in Frameworks */,
 				90E9262A170241FD00D5A36D /* IOKit.framework in Frameworks */,
 				90E92628170241F400D5A36D /* CoreFoundation.framework in Frameworks */,
 				90E9262C1702428A00D5A36D /* libgphoto2.dylib in Frameworks */,
@@ -81,6 +84,7 @@
 		90E925F41702406100D5A36D = {
 			isa = PBXGroup;
 			children = (
+				90E92630170394C200D5A36D /* libsqlite3.dylib */,
 				90E9262B1702428A00D5A36D /* libgphoto2.dylib */,
 				90E92629170241FD00D5A36D /* IOKit.framework */,
 				90E92627170241F400D5A36D /* CoreFoundation.framework */,
