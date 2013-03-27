@@ -43,5 +43,13 @@ void dispatch_source::set_event_handler(void (^block)(void)) {
 }
 
 
+void dispatch_source::set_timer(
+  dispatch_time_t start,
+  uint64_t interval,
+  uint64_t leeway) {
+
+  dispatch_source_set_timer(source, start, interval, leeway);
+}
+
 GPHOTO_ENABLER_NS_END
 

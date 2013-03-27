@@ -47,11 +47,13 @@ private:
   static void setup_launchd_listeners_helper(
     launch_data_t sockets, const char *name, void *p);
 
+  void timed_killer_set_timer();
+
   int                        clients_count;
   hub                        hub;
   IONotificationPortRef      notification_port;
   usb_device_checker         checker;
-  // dispatch_source         timed_killer;
+  dispatch_source            timed_killer;
   std::vector<std::unique_ptr<dispatch_source>>
                              other_sources;
 };

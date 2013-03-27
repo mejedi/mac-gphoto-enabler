@@ -32,11 +32,18 @@ namespace {
 }
 
 
-agent_app::agent_app() {
+agent_app::agent_app(): timed_killer(DISPATCH_SOURCE_TYPE_TIMER, 0) {
   clients_count = 0;
   notification_port = IONotificationPortCreate(kIOMasterPortDefault);
   /* FIXME */
   IONotificationPortSetDispatchQueue(notification_port, dispatch_get_main_queue());
+
+  timed_killer.set_event_handler(^{
+    fprintf(stderr, "exiting due to inactivity\n");
+    CFRunLoopStop(CFRunLoopGetCurrent());
+  });
+  timed_killer_set_timer();
+  timed_killer.resume();
 }
 
 
@@ -49,6 +56,7 @@ void agent_app::client_did_connect() {
   fprintf(stderr, "client did connect\n");
   if (clients_count++ == 0) {
     fprintf(stderr, "first client connected\n");
+    timed_killer.suspend();
   }
 }
 
@@ -57,6 +65,8 @@ void agent_app::client_will_disconnect() {
   fprintf(stderr, "client will disconnect\n");
   if (--clients_count == 0) {
     fprintf(stderr, "last client disconnected\n");
+    timed_killer_set_timer();
+    timed_killer.resume();
   }
 }
 
@@ -239,6 +249,12 @@ void agent_app::setup_launchd_listeners_helper(
     h->resume();
     self->other_sources.push_back(std::move(h));
   }
+}
+
+
+void agent_app::timed_killer_set_timer() {
+  timed_killer.set_timer(
+    dispatch_time(DISPATCH_TIME_NOW, 5LL * NSEC_PER_SEC));
 }
 
 

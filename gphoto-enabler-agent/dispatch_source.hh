@@ -32,6 +32,11 @@ class dispatch_source: non_copyable {
 
     void set_event_handler(void (^block)(void));
 
+    void set_timer(
+      dispatch_time_t start,
+      uint64_t interval = -1,
+      uint64_t leeway = -1);
+
   private:
     dispatch_source_t   source;
     bool                is_suspended;
