@@ -27,6 +27,6 @@ image capture frawework. When a known device is attached the framework launches
 the apropriate backend (ex: PTPCamera).
 
 Each user has his own copy of DeviceDiscoveryDatabase. In the unlikely event we damage
-the database MacOS X rebuilds it from scratch using
+the database MacOS X rebuilds it from scratch using data in
 `/System/Library/Image Capture/Devices/*.app/Contents/Resources/DeviceMatchingInfo.plist`
-data (requires logout).
+(requires logout).
