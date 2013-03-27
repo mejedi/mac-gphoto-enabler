@@ -20,6 +20,7 @@
 		90E92628170241F400D5A36D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92627170241F400D5A36D /* CoreFoundation.framework */; };
 		90E9262A170241FD00D5A36D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92629170241FD00D5A36D /* IOKit.framework */; };
 		90E9262C1702428A00D5A36D /* libgphoto2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E9262B1702428A00D5A36D /* libgphoto2.dylib */; };
+		90E9262F1703755C00D5A36D /* discovery_db_fixup.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E9262D1703755C00D5A36D /* discovery_db_fixup.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +60,8 @@
 		90E92627170241F400D5A36D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		90E92629170241FD00D5A36D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
 		90E9262B1702428A00D5A36D /* libgphoto2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgphoto2.dylib; path = ../../../../usr/local/lib/libgphoto2.dylib; sourceTree = "<group>"; };
+		90E9262D1703755C00D5A36D /* discovery_db_fixup.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = discovery_db_fixup.cc; sourceTree = "<group>"; };
+		90E9262E1703755C00D5A36D /* discovery_db_fixup.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = discovery_db_fixup.hh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				90E9260C1702416600D5A36D /* abstract_device.hh */,
 				90E9260D1702416600D5A36D /* agent_app.cc */,
 				90E9260E1702416600D5A36D /* agent_app.hh */,
+				90E9262D1703755C00D5A36D /* discovery_db_fixup.cc */,
+				90E9262E1703755C00D5A36D /* discovery_db_fixup.hh */,
 				90E9260F1702416600D5A36D /* client_socket.cc */,
 				90E926101702416600D5A36D /* client_socket.hh */,
 				90E926111702416600D5A36D /* client.cc */,
@@ -173,6 +178,7 @@
 				90E926241702416600D5A36D /* main.cc in Sources */,
 				90E926251702416600D5A36D /* usb_device_checker.cc in Sources */,
 				90E926261702416600D5A36D /* usb_device.cc in Sources */,
+				90E9262F1703755C00D5A36D /* discovery_db_fixup.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

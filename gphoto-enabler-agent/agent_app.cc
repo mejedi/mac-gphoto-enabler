@@ -57,6 +57,7 @@ void agent_app::client_did_connect() {
   if (clients_count++ == 0) {
     fprintf(stderr, "first client connected\n");
     timed_killer.suspend();
+    fixup = discovery_db_fixup::create();
   }
 }
 
@@ -65,6 +66,7 @@ void agent_app::client_will_disconnect() {
   fprintf(stderr, "client will disconnect\n");
   if (--clients_count == 0) {
     fprintf(stderr, "last client disconnected\n");
+    fixup.reset();
     timed_killer_set_timer();
     timed_killer.resume();
   }

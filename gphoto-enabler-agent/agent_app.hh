@@ -5,6 +5,7 @@
 #include "hub.hh"
 #include "usb_device_checker.hh"
 #include "dispatch_source.hh"
+#include "discovery_db_fixup.hh"
 
 #include <IOKit/IOKitLib.h>
 
@@ -54,6 +55,8 @@ private:
   dispatch_source            timed_killer;
   std::vector<std::unique_ptr<dispatch_source>>
                              other_sources;
+  std::unique_ptr<discovery_db_fixup>
+                             fixup;
   int                        clients_count;
   hub                        hub;
 };
