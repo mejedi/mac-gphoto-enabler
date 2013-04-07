@@ -5,7 +5,6 @@
 
 #include <sqlite3.h>
 
-#include <regex>
 #include <list>
 #include <vector>
 #include <string>
@@ -68,36 +67,25 @@ discovery_db_fixup::discovery_db_fixup(const std::string &db_file_path_):
 
   auto version = database.exec("SELECT typeID, value FROM DBVersion");
 
-  auto schema = database.exec(
-    "SELECT sql FROM sqlite_master WHERE "
-    "type==\"table\" AND name==\"IOUSBInterface\";");
-
   if (version.size() != 1
     || version.front().at(0) != "1684174450"
-    || version.front().at(1) != "1"
-    || schema.size() != 1) {
+    || version.front().at(1) != "1") {
 
     throw std::runtime_error("Version mismatch");
   }
 
-  auto iousbinterface_table_schema = schema.front().at(0);
-
-  std::string patch_statements;
-  patch_statements
-    .append("BEGIN TRANSACTION; ")
-    .append(
-      std::regex_replace(
-        iousbinterface_table_schema, std::regex("IOUSBInterface"),
-        "_IOUSBInterface"))
-    .append("; ")
-    .append("INSERT INTO _IOUSBInterface SELECT * FROM IOUSBInterface "
+  database.exec(
+    "BEGIN TRANSACTION; "
+    "CREATE TABLE IF NOT EXISTS _IOUSBInterface ("
+      "ID integer primary key not null, typeID integer, "
+      "bInterfaceClass integer, bInterfaceSubClass integer, "
+      "bInterfaceProtocol integer); "
+    "INSERT INTO _IOUSBInterface SELECT * FROM IOUSBInterface "
       "WHERE bInterfaceClass==6 AND bInterfaceSubClass==1 AND "
-      "bInterfaceProtocol==1; ")
-    .append("DELETE FROM IOUSBInterface WHERE ID IN ("
-      "SELECT ID FROM _IOUSBInterface); ")
-    .append("COMMIT TRANSACTION;");
-
-  database.exec(patch_statements);
+      "bInterfaceProtocol==1; "
+    "DELETE FROM IOUSBInterface WHERE ID IN ("
+      "SELECT ID FROM _IOUSBInterface); "
+    "COMMIT TRANSACTION;");
 }
 
 
