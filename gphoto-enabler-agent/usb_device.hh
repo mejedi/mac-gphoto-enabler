@@ -20,6 +20,8 @@ public:
       io_iterator_t service,
       uint8_t bus_num,
       uint16_t address,
+      uint16_t vendor_id,
+      uint16_t product_id,
       const std::string &vendor,
       const std::string &product);
 
@@ -32,8 +34,10 @@ private:
     hub *owner,
     IONotificationPortRef notification_port,
     io_service_t service,
-    uint8_t bus_num_,
-    uint16_t address_,
+    uint8_t bus_num,
+    uint16_t address,
+    uint16_t vendor_id,
+    uint16_t product_id,
     const std::string &vendor,
     const std::string &product);
 
@@ -43,6 +47,8 @@ private:
 
   uint8_t                    bus_num;
   uint16_t                   address;
+  uint16_t                   vendor_id;
+  uint16_t                   product_id;
   std::string                vendor;
   std::string                product;
 };

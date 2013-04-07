@@ -15,11 +15,9 @@
 		90E926221702416600D5A36D /* dispatch_source.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926131702416600D5A36D /* dispatch_source.cc */; };
 		90E926231702416600D5A36D /* hub.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926151702416600D5A36D /* hub.cc */; };
 		90E926241702416600D5A36D /* main.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926171702416600D5A36D /* main.cc */; };
-		90E926251702416600D5A36D /* usb_device_checker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E926181702416600D5A36D /* usb_device_checker.cc */; };
 		90E926261702416600D5A36D /* usb_device.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E9261A1702416600D5A36D /* usb_device.cc */; };
 		90E92628170241F400D5A36D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92627170241F400D5A36D /* CoreFoundation.framework */; };
 		90E9262A170241FD00D5A36D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92629170241FD00D5A36D /* IOKit.framework */; };
-		90E9262C1702428A00D5A36D /* libgphoto2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E9262B1702428A00D5A36D /* libgphoto2.dylib */; };
 		90E9262F1703755C00D5A36D /* discovery_db_fixup.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90E9262D1703755C00D5A36D /* discovery_db_fixup.cc */; };
 		90E92631170394C200D5A36D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E92630170394C200D5A36D /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
@@ -53,14 +51,11 @@
 		90E926151702416600D5A36D /* hub.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hub.cc; sourceTree = "<group>"; };
 		90E926161702416600D5A36D /* hub.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hub.hh; sourceTree = "<group>"; };
 		90E926171702416600D5A36D /* main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
-		90E926181702416600D5A36D /* usb_device_checker.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = usb_device_checker.cc; sourceTree = "<group>"; };
-		90E926191702416600D5A36D /* usb_device_checker.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = usb_device_checker.hh; sourceTree = "<group>"; };
 		90E9261A1702416600D5A36D /* usb_device.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = usb_device.cc; sourceTree = "<group>"; };
 		90E9261B1702416600D5A36D /* usb_device.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = usb_device.hh; sourceTree = "<group>"; };
 		90E9261C1702416600D5A36D /* utility.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = utility.hh; sourceTree = "<group>"; };
 		90E92627170241F400D5A36D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		90E92629170241FD00D5A36D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
-		90E9262B1702428A00D5A36D /* libgphoto2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgphoto2.dylib; path = ../../../../usr/local/lib/libgphoto2.dylib; sourceTree = "<group>"; };
 		90E9262D1703755C00D5A36D /* discovery_db_fixup.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = discovery_db_fixup.cc; sourceTree = "<group>"; };
 		90E9262E1703755C00D5A36D /* discovery_db_fixup.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = discovery_db_fixup.hh; sourceTree = "<group>"; };
 		90E92630170394C200D5A36D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
@@ -74,7 +69,6 @@
 				90E92631170394C200D5A36D /* libsqlite3.dylib in Frameworks */,
 				90E9262A170241FD00D5A36D /* IOKit.framework in Frameworks */,
 				90E92628170241F400D5A36D /* CoreFoundation.framework in Frameworks */,
-				90E9262C1702428A00D5A36D /* libgphoto2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				90E92630170394C200D5A36D /* libsqlite3.dylib */,
-				90E9262B1702428A00D5A36D /* libgphoto2.dylib */,
 				90E92629170241FD00D5A36D /* IOKit.framework */,
 				90E92627170241F400D5A36D /* CoreFoundation.framework */,
 				90E926091702416600D5A36D /* abstract_client.cc */,
@@ -105,8 +98,6 @@
 				90E926151702416600D5A36D /* hub.cc */,
 				90E926161702416600D5A36D /* hub.hh */,
 				90E926171702416600D5A36D /* main.cc */,
-				90E926181702416600D5A36D /* usb_device_checker.cc */,
-				90E926191702416600D5A36D /* usb_device_checker.hh */,
 				90E9261A1702416600D5A36D /* usb_device.cc */,
 				90E9261B1702416600D5A36D /* usb_device.hh */,
 				90E9261C1702416600D5A36D /* utility.hh */,
@@ -180,7 +171,6 @@
 				90E926221702416600D5A36D /* dispatch_source.cc in Sources */,
 				90E926231702416600D5A36D /* hub.cc in Sources */,
 				90E926241702416600D5A36D /* main.cc in Sources */,
-				90E926251702416600D5A36D /* usb_device_checker.cc in Sources */,
 				90E926261702416600D5A36D /* usb_device.cc in Sources */,
 				90E9262F1703755C00D5A36D /* discovery_db_fixup.cc in Sources */,
 			);

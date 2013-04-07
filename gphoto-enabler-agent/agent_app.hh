@@ -3,7 +3,6 @@
 
 #include "utility.hh"
 #include "hub.hh"
-#include "usb_device_checker.hh"
 #include "dispatch_source.hh"
 #include "discovery_db_fixup.hh"
 
@@ -33,7 +32,7 @@ public:
   void setup_launchd_listeners();
 
   bool check_vid_pid(int vid, int pid) {
-    return checker.check_vid_pid(vid, pid);
+    return true;
   }
 
   hub *get_hub() { return &hub; }
@@ -51,7 +50,6 @@ private:
   void timed_killer_set_timer();
 
   IONotificationPortRef      notification_port;
-  usb_device_checker         checker;
   dispatch_source            timed_killer;
   std::vector<std::unique_ptr<dispatch_source>>
                              other_sources;

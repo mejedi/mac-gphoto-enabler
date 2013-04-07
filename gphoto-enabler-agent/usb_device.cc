@@ -2,6 +2,8 @@
 #include "agent_app.hh"
 #include "usb_device.hh"
 
+#include <inttypes.h>
+
 #include <IOKit/IOMessage.h>
 
 GPHOTO_ENABLER_NS_BEGIN
@@ -12,6 +14,8 @@ void usb_device::add(
     io_iterator_t service,
     uint8_t bus_num,
     uint16_t address,
+    uint16_t vendor_id,
+    uint16_t product_id,
     const std::string &vendor,
     const std::string &product) {
 
@@ -19,7 +23,7 @@ void usb_device::add(
     app->get_hub(),
     app->get_notification_port(),
     service,
-    bus_num, address, vendor, product);
+    bus_num, address, vendor_id, product_id, vendor, product);
 
   fprintf(stderr, "add    usb:%03d,%03d %s %s\n", bus_num, address, vendor.c_str(), product.c_str());
 
@@ -43,11 +47,14 @@ usb_device::usb_device(
   io_service_t service,
   uint8_t bus_num_,
   uint16_t address_,
+  uint16_t vendor_id_,
+  uint16_t product_id_,
   const std::string &vendor_,
   const std::string &product_)
 
 : abstract_device(owner, notification_port, service),
   bus_num(bus_num_), address(address_),
+  vendor_id(vendor_id_), product_id(product_id_),
   vendor(vendor_), product(product_) {
 
   ;
@@ -70,8 +77,10 @@ std::string usb_device::format_notification(usb_event_type t) {
   char header[128];
 
   snprintf(
-    header, sizeof header, "%-6s usb:%03d,%03d",
-    (t == USB_DEVICE_ADD ? "add": "remove"), bus_num, address);
+    header, sizeof header,
+    "%-6s vid:%04" PRIx16 " pid:%04" PRIx16 " usb:%03d,%03d",
+    (t == USB_DEVICE_ADD ? "add": "remove"),
+    vendor_id, product_id, bus_num, address);
 
   buf.append(header);
 

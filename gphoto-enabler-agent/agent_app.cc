@@ -203,7 +203,9 @@ void agent_app::init_devices(io_iterator_t iter) {
       /* no more attributes */
 
       if (check_vid_pid(vendor_id, product_id)) {
-        usb_device::add(this, service, location_id>>24, usb_address, vendor, product);
+        usb_device::add(
+            this, service, location_id>>24, usb_address,
+            vendor_id, product_id, vendor, product);
       }
 
       CFRelease(props);
